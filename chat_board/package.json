@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/SummerCash/smart-contracts#readme",
   "devDependencies": {
+    "assemblyscript": "github:AssemblyScript/assemblyscript",
     "gulp": "^4.0.0"
   }
 }
