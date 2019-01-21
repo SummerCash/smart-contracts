@@ -1,7 +1,8 @@
 {
     "defaultSeverity": "error",
     "extends": [
-        "tslint:recommended"
+        "tslint:recommended",
+        "./node_modules/assemblyscript/std/assembly.json",
     ],
     "jsRules": {},
     "rules": {},
