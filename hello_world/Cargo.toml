@@ -1,0 +1,10 @@
+[package]
+name = "hello_world"
+version = "0.1.0"
+authors = ["Dowland Aiello <mitsukomegumii@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
