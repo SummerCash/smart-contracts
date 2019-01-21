@@ -10,4 +10,4 @@ Cargo.lock
 **/*.rs.bk
 
 # NPM Cache
-.node_modules
+.node_modules/
