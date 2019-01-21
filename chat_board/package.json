@@ -1,0 +1,25 @@
+{
+  "name": "chat_board",
+  "version": "1.0.0",
+  "description": "A simple chat board smart contract for the SummerCash VM.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SummerCash/smart-contracts.git"
+  },
+  "keywords": [
+    "smart-contracts",
+    "dApps",
+    "smart",
+    "blockchain"
+  ],
+  "author": "Dowland Aiello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SummerCash/smart-contracts/issues"
+  },
+  "homepage": "https://github.com/SummerCash/smart-contracts#readme"
+}
