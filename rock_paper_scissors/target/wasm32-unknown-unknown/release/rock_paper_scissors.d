@@ -1,0 +1,1 @@
+/Users/dowlandaiello/rust/rust-smart-contracts/rock_paper_scissors/target/wasm32-unknown-unknown/release/rock_paper_scissors.wasm: /Users/dowlandaiello/rust/rust-smart-contracts/rock_paper_scissors/src/lib.rs
