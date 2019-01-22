@@ -1,10 +1,15 @@
+extern crate wasm_bindgen;
+
+use wasm_bindgen::prelude::*;
+
+#[wasm_bindgen]
 extern "C" {
     fn __ursa_log(msg: *const u8, len: usize); // Get vm-provided log method
 }
 
 static mut LAST_MOVE: i32 = 10; // Init last move
 
-#[no_mangle]
+#[wasm_bindgen]
 pub extern "C" fn send_move(move_num: i32) -> i32 {
     let moves = ["rock", "paper", "scissors"]; // Init moves
     let mut message = String::new(); // Init message buffer
