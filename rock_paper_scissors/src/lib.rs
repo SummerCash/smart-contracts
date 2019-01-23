@@ -7,7 +7,7 @@ static mut ROUNDS_PLAYED: i32 = 0; // Init rounds
 
 #[no_mangle]
 pub extern "C" fn make_move(move_num: i32) -> i32 {
-    let message: &[u8]; // Init message
+    let mut message = "made move".as_bytes(); // Init message buffer
     let error_message = "player made invalid move!".as_bytes(); // Init err message
     let lost_message = "you lost this round!".as_bytes(); // Init lost message
     let won_message = "you won this round!".as_bytes(); // Init won message
