@@ -30,7 +30,7 @@ pub extern "C" fn make_move(move_num: i32) -> i32 {
             }
         }
 
-        LAST_MOVE = 0; // Set move
+        LAST_MOVE = move_num; // Set move
     }
 
     unsafe {
