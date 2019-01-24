@@ -11,6 +11,7 @@ pub extern "C" fn make_move(move_num: i32) -> i32 {
     let error_message = "player made invalid move!".as_bytes(); // Init err message
     let lost_message = "you lost this round!".as_bytes(); // Init lost message
     let won_message = "you won this round!".as_bytes(); // Init won message
+    let start_message = "started match!".as_bytes(); // Init start message
 
     unsafe {
         match move_num { // Handle move message
@@ -22,18 +23,17 @@ pub extern "C" fn make_move(move_num: i32) -> i32 {
 
         if LAST_MOVE == 10 || ROUNDS_PLAYED == 6 { // Check is starting game or should start game
             ROUNDS_PLAYED = 0; // Set rounds played
-        } else {
-            match LAST_MOVE { // Handle other player moves
-                1 => __ursa_log(lost_message.as_ptr(), lost_message.len()), // Log lost
-                2 => __ursa_log(won_message.as_ptr(), won_message.len()), // Log lost
-                _ => __ursa_log(error_message.as_ptr(), error_message.len()), // Log error
-            }
+        }
+
+        match LAST_MOVE { // Handle moves
+            1 => __ursa_log(lost_message.as_ptr(), lost_message.len()), // Log lost
+            2 => __ursa_log(won_message.as_ptr(), won_message.len()), // Log lost
+            10 => __ursa_log(start_message.as_ptr(), start_message.len()), // Log starting move
+            _ => __ursa_log(error_message.as_ptr(), error_message.len()), // Log error
         }
 
         LAST_MOVE = move_num; // Set move
-    }
 
-    unsafe {
         ROUNDS_PLAYED+=1; // Increment rounds
 
         __ursa_log(message.as_ptr(), message.len()); // Log
