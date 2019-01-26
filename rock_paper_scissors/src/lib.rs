@@ -41,3 +41,10 @@ pub extern "C" fn make_move(move_num: i32) -> i32 {
 
     return 0; // Return success
 }
+
+#[no_mangle]
+pub fn get_last_move() -> i32 {
+    unsafe {
+        return LAST_MOVE; // Get last move
+    }
+}
